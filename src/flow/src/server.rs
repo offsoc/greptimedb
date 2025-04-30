@@ -572,6 +572,7 @@ impl<'a> FlownodeServiceBuilder<'a> {
         }
     }
 
+    /// TODO(discord9): add plugins to FlowDualEngine
     pub async fn build(mut self) -> Result<ServerHandlers, Error> {
         let handlers = ServerHandlers::default();
         if let Some(grpc_server) = self.grpc_server.take() {
